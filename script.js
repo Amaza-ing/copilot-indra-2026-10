@@ -4,6 +4,7 @@ const clockTime = document.querySelector("#clock-time");
 const hourHand = document.querySelector(".clock-hand--hour");
 const minuteHand = document.querySelector(".clock-hand--minute");
 const secondHand = document.querySelector(".clock-hand--second");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const messages = [
   "Un pequeño espacio para dar vida a tus ideas.",
@@ -20,7 +21,9 @@ greetingButton.addEventListener("click", () => {
 
 function updateClock() {
   const now = new Date();
-  const seconds = now.getSeconds() + now.getMilliseconds() / 1000;
+  const seconds = reducedMotion.matches
+    ? 0
+    : now.getSeconds() + now.getMilliseconds() / 1000;
   const minutes = now.getMinutes() + seconds / 60;
   const hours = (now.getHours() % 12) + minutes / 60;
 

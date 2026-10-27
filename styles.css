@@ -430,16 +430,19 @@ button span {
 
 .clock {
   position: fixed;
-  right: 24px;
-  bottom: 24px;
+  right: 20px;
+  bottom: 20px;
   z-index: 2;
-  width: 94px;
-  height: 94px;
-  padding: 7px;
-  background: #fff;
-  border: 1px solid #e8e5f1;
+  width: 100px;
+  height: 100px;
+  padding: 8px;
+  background: linear-gradient(145deg, #fff, #f8f6ff);
+  border: 1px solid #e7e2f6;
   border-radius: 50%;
-  box-shadow: 0 12px 32px rgb(37 34 66 / 13%);
+  box-shadow:
+    0 14px 34px rgb(73 57 142 / 14%),
+    0 3px 9px rgb(73 57 142 / 6%),
+    inset 0 1px 0 rgb(255 255 255 / 90%);
 }
 
 .clock-face {
@@ -447,16 +450,15 @@ button span {
   display: block;
   width: 100%;
   height: 100%;
-  border: 2px solid #7966e5;
+  border: 1px solid #dcd5f5;
   border-radius: 50%;
   background:
     radial-gradient(circle, #292541 0 2px, transparent 2.5px),
-    repeating-conic-gradient(
-      from 0deg,
-      #7966e5 0deg 1.5deg,
-      transparent 1.5deg 30deg
-    ),
-    #fbfaff;
+    radial-gradient(circle, #fff 0 64%, transparent 65%),
+    repeating-conic-gradient(from -1deg, #7966e5 0deg 2deg, transparent 2deg 30deg),
+    repeating-conic-gradient(from -0.5deg, #c9c1ef 0deg 1deg, transparent 1deg 6deg),
+    #fff;
+  box-shadow: inset 0 2px 6px rgb(73 57 142 / 7%);
 }
 
 .clock-hand {
@@ -469,20 +471,22 @@ button span {
 }
 
 .clock-hand--hour {
-  width: 4px;
-  height: 25%;
+  width: 5px;
+  height: 27%;
   background: #292541;
+  box-shadow: 0 1px 2px rgb(41 37 65 / 18%);
 }
 
 .clock-hand--minute {
   width: 3px;
-  height: 36%;
+  height: 38%;
   background: #7966e5;
+  box-shadow: 0 1px 2px rgb(121 102 229 / 20%);
 }
 
 .clock-hand--second {
-  width: 1px;
-  height: 40%;
+  width: 2px;
+  height: 41%;
   background: #e78372;
 }
 
@@ -490,8 +494,8 @@ button span {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   background: #e78372;
   border: 2px solid #fff;
   border-radius: 50%;
@@ -653,9 +657,9 @@ button:focus-visible {
   .clock {
     right: 14px;
     bottom: 14px;
-    width: 76px;
-    height: 76px;
-    padding: 5px;
+    width: 80px;
+    height: 80px;
+    padding: 6px;
   }
 }
 
@@ -665,5 +669,9 @@ button:focus-visible {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .clock-hand--second {
+    display: none;
   }
 }
