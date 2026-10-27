@@ -5,20 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Una página web sencilla de bienvenida."
+      content="Haz una pausa, encuentra inspiración y dale forma a eso que tienes en mente."
     />
-    <title>Hola, mundo</title>
+    <title>Brilla — Un lugar para tus ideas</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <main class="card">
-      <span class="eyebrow">Una página sencilla</span>
-      <h1>¡Hola, mundo!</h1>
-      <p id="greeting" aria-live="polite">
-        Un pequeño espacio para dar vida a tus ideas.
-      </p>
-      <button id="greeting-button" type="button">Cambiar saludo</button>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Brilla, ir al inicio">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>brilla</span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#inspiracion">Inspiración</a>
+      </nav>
+      <a class="header-cta" href="#greeting-button">
+        Empezar <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main class="hero" id="inicio">
+      <section class="hero-copy" aria-labelledby="hero-title">
+        <span class="eyebrow"><span aria-hidden="true">✦</span> Un lugar para tus ideas</span>
+        <h1 id="hero-title">Lo extraordinario empieza <span>con una idea.</span></h1>
+        <p id="greeting" aria-live="polite">
+          Haz una pausa, encuentra inspiración y dale forma a eso que tienes en mente.
+        </p>
+        <div class="hero-actions">
+          <button id="greeting-button" type="button">
+            Encuentra tu inspiración <span aria-hidden="true">→</span>
+          </button>
+          <span class="hero-note"><span class="note-dot" aria-hidden="true"></span> Tu próximo comienzo está aquí</span>
+        </div>
+      </section>
+
+      <section class="hero-art" id="inspiracion" aria-label="Un espacio creativo para tus ideas">
+        <div class="art-glow"></div>
+        <div class="art-spark art-spark--one" aria-hidden="true">✳</div>
+        <div class="art-spark art-spark--two" aria-hidden="true">✦</div>
+        <div class="idea-card">
+          <div class="idea-card-top">
+            <span class="idea-label"><span class="note-dot" aria-hidden="true"></span> EN PROGRESO</span>
+            <span class="idea-menu" aria-hidden="true">•••</span>
+          </div>
+          <div class="idea-illustration" aria-hidden="true">
+            <div class="idea-orbit idea-orbit--one"></div>
+            <div class="idea-orbit idea-orbit--two"></div>
+            <div class="idea-sun">✦</div>
+            <div class="idea-leaf idea-leaf--one"></div>
+            <div class="idea-leaf idea-leaf--two"></div>
+          </div>
+          <span class="idea-caption">Todo empieza<br />por imaginar.</span>
+          <div class="idea-progress"><span></span></div>
+          <span class="idea-progress-label">Un pequeño paso cada día</span>
+        </div>
+        <div class="floating-note"><span aria-hidden="true">✦</span> Piensa en grande</div>
+        <div class="art-caption">CREATIVIDAD SIN PRISA <span>✳</span></div>
+      </section>
     </main>
     <aside class="clock" role="img" aria-labelledby="clock-time">
       <span class="clock-face" aria-hidden="true">
@@ -31,7 +76,5 @@
     </aside>
   </body>
 </html>
-
-
 
 
