@@ -1,4 +1,4 @@
-# Hola, mundo!!!!!
+# Hola, mundo
 
 Una página web sencilla de bienvenida, hecha con HTML, CSS y JavaScript nativos. Incluye un saludo que puedes cambiar y un reloj analógico que muestra la hora local.
 
