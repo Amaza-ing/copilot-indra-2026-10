@@ -24,6 +24,14 @@ python -m http.server 8000
 
 Después, abre [http://localhost:8000](http://localhost:8000) en el navegador.
 
+## Tests
+
+Con Node.js 18 o posterior, ejecuta la suite integrada, sin instalar dependencias:
+
+```bash
+node --test
+```
+
 ## Estructura del proyecto
 
 ```text
@@ -31,6 +39,8 @@ mi-web/
 ├── index.html   # Estructura y contenido de la página
 ├── styles.css   # Estilos y diseño adaptable
 ├── script.js    # Saludo interactivo y reloj
+├── tests/
+│   └── script.test.js  # Tests del saludo y el reloj
 └── README.md    # Documentación del proyecto
 ```
 
