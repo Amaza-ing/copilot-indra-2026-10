@@ -62,9 +62,9 @@ test("el HTML carga el script de forma diferida y contiene sus elementos", () =>
 test("el botón recorre los mensajes de inspiración y vuelve al primero", () => {
   const { elements } = loadApp();
   const messages = [
-    "Un pequeño espacio para dar vida a tus ideas.",
-    "¡Qué bueno tenerte por aquí!",
-    "Las grandes ideas empiezan con algo sencillo.",
+    "patata1",
+    "patata2",
+    "patata3",
   ];
 
   for (const message of [
